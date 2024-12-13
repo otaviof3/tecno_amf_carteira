@@ -15,17 +15,17 @@
       </div>
     </nav>
     <section>
-      <p><b>Nome do Estudante:</b> Otávio Ferreira Dahlke</p>
-      <p><b>Data de Nascimento:</b> 03/06/2004</p>
-      <p><b>E-mail:</b> otaviofd03@gmail.com</p>
-      <p><b>Número de Matrícula:</b> 007053</p>
-      <p><b>Período:</b> 1°</p>
+      <p><b>Nome do Estudante:</b> {{ estudante.nome }}</p>
+      <p><b>Data de Nascimento:</b> {{ estudante.dt_nascimento }}</p>
+      <p><b>E-mail:</b> {{ estudante.email }}</p>
+      <p><b>Número de Matrícula:</b> {{ estudante.matricula }}</p>
+      <p><b>Período:</b> {{ estudante.periodo }}</p>
     </section>
     <section>
-      <p><b>Número de Telefone:</b> 55997171476</p>
-      <p><b>Contato de Emergência:</b> 55996030702</p>
-      <p><b>Cidade:</b> Restinga Seca, RS</p>
-      <p><b>Endereço:</b> Rua Santos Dumont, 1391, Centro</p>
+      <p><b>Número de Telefone:</b> {{ estudante.telefone }}</p>
+      <p><b>Contato de Emergência:</b> {{ estudante.telefone_emergencia }}</p>
+      <p><b>Cidade:</b> {{ estudante.cidade }}</p>
+      <p><b>Endereço:</b> {{ estudante.endereço }}</p>
     </section>
   </body>
 </html>
