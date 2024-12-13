@@ -14,13 +14,12 @@ def perfil_estudante(request):
 
 def login_view(request):
     if request.method == "POST":
-        matricula = request.POST.get('matricula')
-        password = request.POST.get('password')
-        user = authenticate(request, matricula=matricula, password=password)
+        username = request.POST['matricula']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            request.session['matricula'] = matricula 
-            return redirect('perfil_estudante')
+            return redirect('perfil_estudante') 
         else:
-            return render(request, 'login.html', {'error': 'Credenciais inválidas'})
+            return render(request, 'login.html', {'error': 'Credenciais inválidas.'})
     return render(request, 'login.html')

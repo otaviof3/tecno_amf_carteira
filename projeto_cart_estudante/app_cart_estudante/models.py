@@ -11,3 +11,9 @@ class Estudante(models.Model):
     telefone_emergencia = models.CharField(max_length=20)
     cidade = models.CharField(max_length=100)
     endereço = models.TextField()
+
+class User(models.Model):
+    id_user = models.AutoField(primary_key=True)
+    username = models.CharField(max_length=6)
+    password = models.TextField(max_length=255)
+    email = models.EmailField()
